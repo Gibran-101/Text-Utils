@@ -13,10 +13,11 @@
   <body>
  <style>
      body{
-         background-color: #1dd1a1;
+         background-color: #f1faee;
      }
  </style>
-        <nav class="navbar navbar-dark" style= "background-color: #ee5253" color:"#000">
+
+          <nav class="navbar navbar-expand-lg navbar-dark" style= "background-color: #1d3557" color:"#ffffff">
             <div class="container-fluid">
               <a class="navbar-brand" href="/">gTextUtils</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,23 +29,25 @@
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                    <a class="nav-link active" href="/">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+                    <a class="nav-link active" href="/">Contact Us</a>
                   </li>
                 </ul>
-
+                <form class="d-flex">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
-                
+                </form>
               </div>
             </div>
           </nav>
-    
-   <div class="container my-3">
+ 
+  
+   <div class="container my-3" style = "padding-top: 20vh">
 
-    <form action='/analyze' method='get'>
+    <form action='/analyze' method='post'>
+      {% csrf_token %}
 
     <div class="form-floating">
       <textarea class="form-control" name="text" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px"></textarea>
@@ -76,7 +79,7 @@
       <label class="form-check-label" for="flexSwitchCheckDefault5">Character Counter</label>
     </div>
 
-    <button type="submit" class="btn btn-dark" style= "background-color: #ee5253" "color: #c8d6e5">Analyze Text</button>
+    <button type="submit" class="btn btn-dark" style= "background-color: #1d3557" "color: #c8d6e5">Analyze Text</button>
  
     </form>
    </div>
